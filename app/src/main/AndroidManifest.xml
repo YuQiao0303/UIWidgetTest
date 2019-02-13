@@ -19,7 +19,8 @@
         <activity android:name=".LinearActivity" />
         <activity android:name=".RelativeActivity" />
         <activity android:name=".FrameActivity" />
-        <activity android:name=".PercentActivity"></activity>
+        <activity android:name=".PercentActivity" />
+        <activity android:name=".ListViewActivity"></activity>
     </application>
 
 </manifest>
