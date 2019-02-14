@@ -20,7 +20,8 @@
         <activity android:name=".RelativeActivity" />
         <activity android:name=".FrameActivity" />
         <activity android:name=".PercentActivity" />
-        <activity android:name=".ListViewActivity"></activity>
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".RecyclerViewActivity"></activity>
     </application>
 
 </manifest>

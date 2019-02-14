@@ -1,19 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--&lt;!&ndash;纵向滚动&ndash;&gt;-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+    <!--<ImageView-->
+        <!--android:id="@+id/fruit_image"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp" />-->
+    <!--<TextView-->
+        <!--android:id="@+id/fruit_name"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_marginLeft="10dp" />-->
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="this button"/>&ndash;&gt;-->
+<!--</LinearLayout>-->
+
+<!--&lt;!&ndash;横向滚动&ndash;&gt;-->
+<!--&lt;!&ndash;主要是下面两句：-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="100dp"-->
+<!--&ndash;&gt;-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="wrap_content" >-->
+    <!--<ImageView-->
+        <!--android:id="@+id/fruit_image"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_gravity="center_horizontal" />-->
+    <!--<TextView-->
+        <!--android:id="@+id/fruit_name"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="10dp" />-->
+<!--</LinearLayout>-->
+
+<!--瀑布流-->
+<!--
+1.首先将LinearLayout的宽度由100dp改成了match_parent ，
+  因为瀑布流布局的宽度应该是根据布局的列数来自动适配的， 而不是一个固定值。
+2.使用了layout_margin 属性来让子项之间互留一点间距， 这样就不至于所有子项都紧贴在一些。
+3.将TextView的对齐属性改成了居左对齐，
+  因为待会我们会将文字的长度变长， 如果还是居中显示就会感觉怪怪的。-->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp" >
     <ImageView
         android:id="@+id/fruit_image"
         android:layout_width="40dp"
-        android:layout_height="40dp" />
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal" />
     <TextView
         android:id="@+id/fruit_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="10dp" />
-    <!--<Button-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:text="this button"/>-->
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp" />
 </LinearLayout>

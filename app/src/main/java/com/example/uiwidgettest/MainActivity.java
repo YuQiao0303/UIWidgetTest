@@ -32,12 +32,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button buttonFrame = (Button) findViewById(R.id.button_frame);
         Button buttonPercent = (Button) findViewById(R.id.button_percent);
         Button buttonListView = (Button) findViewById(R.id.button_list_view);
+        Button buttonRecyclerView = (Button) findViewById(R.id.button_recycler_view);
 
         buttonLinear.setOnClickListener(this);   //类内的onClick接口作为监听函数
         buttonRelative.setOnClickListener(this);
         buttonFrame.setOnClickListener(this);
         buttonPercent.setOnClickListener(this);
         buttonListView.setOnClickListener(this);
+        buttonRecyclerView.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -63,6 +65,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_list_view:
                 Intent intent5 = new Intent(MainActivity.this, ListViewActivity.class);
                 startActivity(intent5);
+                break;
+            case R.id.button_recycler_view:
+                Intent intent6 = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                startActivity(intent6);
                 break;
             default:
                 break;
